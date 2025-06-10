@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con Variable Booleana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .resultado {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplo de Variable Booleana</h1>
+    <button id="toggleButton">Cambiar Valor de la Variable</button>
+    <div class="resultado" id="resultado">El valor actual de la variable es: false</div>
+
+    <script>
+        // Definimos la variable booleana
+        let variableBooleana = false;
+
+        // Referencia al botón y al div de resultado
+        const button = document.getElementById("toggleButton");
+        const resultadoDiv = document.getElementById("resultado");
+
+        // Función que cambia el valor de la variable booleana y actualiza el texto en la página
+        button.addEventListener("click", function() {
+            variableBooleana = !variableBooleana;  // Cambia el valor de la variable
+            resultadoDiv.textContent = `El valor actual de la variable es: ${variableBooleana}`;
+        });
+    </script>
+</body>
+</html>
